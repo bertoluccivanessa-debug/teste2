@@ -1,0 +1,140 @@
+/* IMMUNOVERSE Clinical 5.4: contextual learning workshops, atlas and field investigations */
+.cdp-workshop{color:var(--clinical-ink,#17394a)}
+.cdp-workshop-head{display:flex;justify-content:space-between;align-items:flex-start;gap:20px;padding:20px 0 22px;flex-wrap:wrap}
+.cdp-workshop-head h2{font-size:clamp(1.55rem,2.7vw,2.55rem);line-height:1.13;margin:8px 0}
+.cdp-workshop-head p{max-width:720px;line-height:1.65}
+.cdp-phase-track{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:0 0 18px}
+.cdp-phase-track>div{display:grid;grid-template-columns:34px 1fr;align-items:center;gap:2px 9px;padding:15px;background:#f2f7f9;border:1px solid #d8e5e9;border-radius:14px;opacity:.77}
+.cdp-phase-track>div.active{background:#e8f6f3;opacity:1;border-color:#56ab95;box-shadow:inset 0 0 0 1px #56ab9535}
+.cdp-phase-track>div.done{opacity:1;border-color:#85bcb0}
+.cdp-phase-track span{grid-row:span 2;background:#e0eeee;color:#1f625c;display:grid;place-items:center;border-radius:9px;width:31px;height:31px;font-weight:800}
+.cdp-phase-track small{font-size:12px;color:#54717c}.cdp-phase-track strong{font-size:14px}
+.cdp-stimulus{padding:21px 24px;background:linear-gradient(125deg,#0f3546,#18615d);color:#fff;border-radius:15px;margin-bottom:18px;box-shadow:0 8px 25px #0b445019}
+.cdp-stimulus .clinical-overline,.cdp-stimulus small{color:#b1e7db}
+.cdp-stimulus p{font-size:clamp(16px,1.5vw,19px);font-weight:550;line-height:1.55;max-width:960px;margin:10px 0}
+.cdp-workshop-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(285px,1fr);gap:18px;align-items:start}
+.cdp-challenge,.cdp-explain{background:#fff;border:1px solid #dce8ec;border-radius:18px;padding:24px;box-shadow:0 8px 28px #123c5410;min-width:0}
+.cdp-challenge h3{font-size:clamp(19px,2vw,24px);line-height:1.36;margin:11px 0 21px}
+.cdp-choices{display:grid;gap:11px}
+.cdp-choice{border:1.5px solid #c5d7df;background:#f7fafb;border-radius:12px;color:#173b4b;text-align:left;padding:15px;display:flex;gap:15px;align-items:center;line-height:1.48;cursor:pointer;transition:transform .15s,border-color .15s,background .15s;font-weight:600}
+.cdp-choice span{background:#e2eef0;width:28px;height:28px;border-radius:8px;display:grid;place-items:center;flex-shrink:0;font-size:13px}
+.cdp-choice:hover:not(:disabled){transform:translateY(-2px);border-color:#0a8279;background:#edf9f6}
+.cdp-choice.correct{background:#e7f6ef;border-color:#2c9974}
+.cdp-choice:disabled{cursor:default;opacity:.8}
+.cdp-feedback{padding:14px 17px;border:1px solid #e5b890;border-radius:12px;background:#fff6e9;color:#744620;margin:15px 0}
+.cdp-feedback.good{border-color:#99cbbb;background:#e9f8f1;color:#205c4a}
+.cdp-evidence{background:#eef5f9;padding:14px 18px;margin:13px 0;border-radius:12px;line-height:1.6}
+.cdp-explain details{border-bottom:1px solid #e0e9eb;padding:12px 2px}
+.cdp-explain summary{font-weight:750;color:#164c5b;cursor:pointer;line-height:1.5}
+.cdp-explain details[open] summary{color:#087c71}
+.cdp-explain details p{font-size:14px;line-height:1.68;color:#364f58;margin:8px 0}
+.cdp-related{margin-top:16px;background:#eff7f6;padding:16px;border-radius:14px;display:flex;gap:9px;flex-direction:column}
+.cdp-related p{font-size:14px;line-height:1.5}
+.cdp-actions{display:flex;flex-wrap:wrap;gap:8px;padding-top:12px}
+.expedition-progress{border:1px solid #d8e7e8;background:#f5f9f9;border-radius:15px;padding:14px 18px;margin-bottom:18px;display:grid;gap:7px;color:#254a54}
+.expedition-progress small{color:#506b75}
+.map-hotspot.field-complete{background:#effff7;border-color:#4cb589;box-shadow:0 0 0 5px #3eaa7f33}
+.fieldwork-panel{margin:16px 0 24px;background:#fff;border:1px solid #d7e6e9;border-radius:18px;padding:22px;box-shadow:0 8px 28px #173f5510;color:#1e4654}
+.fieldwork-panel h3{margin:12px 0 19px;font-size:clamp(18px,2vw,23px);line-height:1.37}
+.fieldwork-options{display:grid;grid-template-columns:1fr;gap:10px}
+.fieldwork-choice{padding:13px 16px;text-align:left;background:#f4f9fa;border:1px solid #cadee3;border-radius:11px;color:#204151;font-size:15px;cursor:pointer}
+.fieldwork-choice:hover:not(:disabled){border-color:#15897e;background:#e8f5ef}
+.fieldwork-choice.correct{background:#e2f6ed;border-color:#2b986d;font-weight:700}
+.fieldwork-feedback{border-left:4px solid #d8a258;background:#fff9ec;border-radius:8px;padding:12px 15px;margin:12px 0;line-height:1.56}
+.fieldwork-feedback.correct{border-color:#31a181;background:#e9f8f3}
+.fieldwork-feedback p{margin:6px 0}
+.fieldwork-actions{margin-top:15px;display:flex;gap:10px;flex-wrap:wrap}
+.glossary-context-layout{display:grid;grid-template-columns:minmax(215px,0.68fr) minmax(0,1.6fr);gap:16px;align-items:start;margin-bottom:22px}
+.glossary-browser{display:grid;gap:7px;max-height:670px;overflow:auto;padding:15px;background:#f2f7f8;border:1px solid #d7e4e9;border-radius:16px}
+.glossary-browser>b{padding:8px;color:#2c5664}
+.atlas-term-choice{text-align:left;border:1px solid transparent;background:#fff;border-radius:10px;padding:10px 12px;color:#23444f;display:flex;align-items:center;justify-content:space-between;gap:10px;cursor:pointer}
+.atlas-term-choice small{font-size:11px;color:#57737a}
+.atlas-term-choice.selected{background:#dff4ee;border-color:#5daf98}
+.glossary-context{background:#fff;border:1px solid #d9e6e7;border-radius:18px;padding:clamp(18px,2.3vw,32px);box-shadow:0 6px 24px #083d4b12;color:#214651}
+.glossary-context h2{font-size:clamp(22px,2.5vw,34px);margin:8px 0 12px;color:#113b4a}
+.glossary-direct{font-size:17px;line-height:1.67;border-left:4px solid #279e8d;background:#f0faf7;padding:16px;border-radius:8px}
+.glossary-reason{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:16px 0}
+.glossary-reason section{background:#f3f8f9;border:1px solid #e1ebee;border-radius:12px;padding:15px}
+.glossary-reason span{display:block;font-size:12px;font-weight:850;color:#087b77;margin-bottom:8px}
+.glossary-reason p{margin:0;line-height:1.58;font-size:14px}
+.glossary-links{display:flex;gap:9px;flex-wrap:wrap;margin:15px 0}
+.atlas-clinical-bridge{background:#eaf5f4;border:1px solid #cce3e1;border-radius:14px;padding:19px;margin:16px 0;color:#214e57}
+.atlas-clinical-bridge p{margin:7px 0 13px}
+@media(max-width:850px){.cdp-workshop-grid,.glossary-context-layout{grid-template-columns:1fr}.glossary-browser{display:flex;overflow-x:auto;max-height:none;scroll-snap-type:x proximity}.atlas-term-choice{min-width:160px;scroll-snap-align:start;display:grid}.cdp-phase-track{gap:5px}.cdp-phase-track>div{padding:10px 5px;display:block}.cdp-phase-track span{display:none}.cdp-phase-track strong{font-size:13px}.cdp-phase-track small{font-size:10px}}
+@media(max-width:560px){.glossary-reason{grid-template-columns:1fr}.cdp-challenge,.cdp-explain,.fieldwork-panel{padding:17px}.cdp-phase-track>div{padding:9px 6px}.fieldwork-actions .btn,.glossary-links .btn{width:100%}}
+@media(prefers-reduced-motion:reduce){.cdp-choice{transition:none}.cdp-choice:hover:not(:disabled){transform:none}}
+
+/* Navegação e rodapé acadêmico do Laboratório Causal */
+.institutional-footer .footer-inner{max-width:1540px;margin:0 auto;display:grid;gap:5px;line-height:1.5}
+.institutional-footer .footer-inner>strong{font-size:14px;letter-spacing:.01em;color:#f0fbff}
+.institutional-footer .footer-inner p{font-size:12px;color:#c4dce6;margin:0}
+.institutional-footer .footer-inner b{color:#fff}
+.institutional-footer .footer-disclaimer{border-top:1px solid #2b5261;padding-top:11px;margin-top:9px!important;color:#adc5cf!important}
+.institutional-footer .footer-inner small{color:#a7c2cd;margin-top:7px}
+.causal-dashboard-card,.causal-quicklink{display:flex;align-items:center;justify-content:space-between;gap:20px;border:1px solid #cde4e5;background:linear-gradient(110deg,#f1fbfa,#eaf5f8);border-radius:13px;padding:20px 24px;margin:18px 0}
+.causal-dashboard-card h2{font-size:22px;margin:5px 0 8px;color:#173c50}.causal-dashboard-card p,.causal-quicklink p{font-size:13px;color:#53717e;margin:4px 0}.causal-quicklink b{color:#123e50}
+@media(max-width:760px){.mobile-dock{grid-template-columns:repeat(6,minmax(0,1fr))!important}.mobile-dock button small{font-size:9px!important}.causal-dashboard-card,.causal-quicklink{flex-direction:column;align-items:stretch}.causal-dashboard-card .btn,.causal-quicklink .btn{width:100%}}
+@media(max-width:390px){.mobile-dock button small{font-size:8px!important}}
+
+/* Atlas imunológico expandido */
+.atlas-expanded{display:grid;gap:22px}
+.atlas-intro{background:linear-gradient(180deg,#f6fbff 0%,#ffffff 100%);border:1px solid #d8e7ee;border-radius:20px;padding:24px;color:#1e4450}
+.atlas-intro h1{margin:6px 0 8px;font-size:clamp(30px,4vw,52px);line-height:1.03;color:#18384b}
+.atlas-intro h1 span{color:#0c8f87}
+.atlas-intro p{max-width:1000px;margin:0 0 14px;font-size:17px;line-height:1.6}
+.atlas-summary-pills,.atlas-anchor-nav{display:flex;flex-wrap:wrap;gap:10px}
+.atlas-summary-pills span,.atlas-anchor-nav a{display:inline-flex;align-items:center;gap:8px;padding:10px 13px;border-radius:999px;background:#ecf6f8;border:1px solid #cfe5e7;color:#23505c;font-weight:700;text-decoration:none}
+.atlas-layout{display:grid;grid-template-columns:minmax(230px,280px) minmax(0,1fr);gap:18px;align-items:start}
+.atlas-select{display:grid;gap:8px;position:sticky;top:88px;max-height:calc(100vh - 120px);overflow:auto;padding-right:4px}
+.atlas-choice{text-align:left;border:1px solid #d7e5ea;background:#fff;border-radius:14px;padding:12px 14px;color:#203d49;display:grid;gap:3px;cursor:pointer;transition:.16s ease box-shadow,.16s ease transform,.16s ease border-color}
+.atlas-choice small{color:#5f7980;font-size:12px}
+.atlas-choice:hover{transform:translateY(-1px);box-shadow:0 10px 22px rgba(26,69,84,.08)}
+.atlas-choice.active{border-color:#29b3a3;background:#eaf8f5;box-shadow:0 12px 26px rgba(23,130,121,.12)}
+.atlas-work{background:#fff;border:1px solid #d9e6ec;border-radius:20px;padding:22px;display:grid;grid-template-columns:minmax(180px,240px) minmax(0,1fr);gap:22px;align-items:start}
+.atlas-image{display:grid;place-items:center;background:#f7fbfd;border:1px solid #e0edf2;border-radius:18px;min-height:230px;padding:18px}
+.atlas-description h2{margin:4px 0 8px;font-size:38px;line-height:1.05;color:#18384b}
+.atlas-description>p{font-size:17px;line-height:1.6;color:#33545f}
+.atlas-meta-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:16px 0}
+.atlas-meta-grid>div,.atlas-subcards article,.atlas-info-card{background:#fbfdfe;border:1px solid #dde9ee;border-radius:16px;padding:14px 16px;color:#244751}
+.atlas-meta-grid strong,.atlas-subcards h3,.atlas-info-card h3{display:block;margin-bottom:6px;color:#143746}
+.atlas-meta-grid p,.atlas-subcards p,.atlas-info-card p,.atlas-info-card li{line-height:1.56}
+.atlas-toggle{display:inline-flex;gap:8px;background:#f1f6fa;border:1px solid #dbe7ed;border-radius:999px;padding:5px;margin:4px 0 12px}
+.atlas-toggle button{border:0;background:transparent;padding:9px 14px;border-radius:999px;font-weight:700;color:#35505d;cursor:pointer}
+.atlas-toggle button.active{background:#08384f;color:#fff}
+.atlas-outcome{border:1px solid #cde8e1;background:#ebfaf6;border-radius:16px;padding:14px 16px;color:#174a46;margin-bottom:14px}
+.atlas-outcome.altered{background:#fff5f2;border-color:#f0d1c7;color:#804534}
+.atlas-outcome strong{display:block;margin-bottom:5px}
+.atlas-subcards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:14px 0}
+.atlas-subcards ul,.atlas-info-card ul{padding-left:18px;margin:8px 0 0}
+.atlas-actions{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0 8px}
+.atlas-knowledge-section{display:grid;gap:16px}
+.atlas-knowledge-block{display:grid;gap:10px}
+.atlas-card-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.atlas-card-grid.term{grid-template-columns:repeat(3,minmax(0,1fr))}
+.atlas-info-card small{display:block;margin-top:10px;color:#4b6872;line-height:1.5}
+.atlas-info-card ul li+li{margin-top:5px}
+.atlas-clinical .section-head{margin-bottom:0}
+@media(max-width:1120px){.atlas-work{grid-template-columns:1fr}.atlas-image{min-height:200px}.atlas-subcards{grid-template-columns:1fr}.atlas-card-grid.term{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:900px){.atlas-layout{grid-template-columns:1fr}.atlas-select{position:static;max-height:none;grid-template-columns:repeat(2,minmax(0,1fr))}.atlas-meta-grid,.atlas-card-grid{grid-template-columns:1fr}.atlas-card-grid.term{grid-template-columns:1fr}}
+@media(max-width:620px){.atlas-intro,.atlas-work{padding:18px}.atlas-select{grid-template-columns:1fr}.atlas-description h2{font-size:31px}.atlas-summary-pills span,.atlas-anchor-nav a{font-size:13px;padding:9px 11px}}
+
+/* Hematopoiese ilustrada */
+.atlas-hema-section{display:grid;gap:16px}
+.atlas-figure-panel{display:grid;grid-template-columns:minmax(260px,360px) minmax(0,1fr);gap:16px;align-items:start}
+.atlas-figure-panel.secondary{grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr)}
+.atlas-figure-copy{background:#fbfdfe;border:1px solid #dde9ee;border-radius:18px;padding:16px;color:#234751}
+.atlas-figure-copy h3{margin:0 0 10px;color:#163847}
+.atlas-figure-copy p{line-height:1.6}
+.atlas-svg{width:100%;height:auto;display:block;background:#fff;border:1px solid #dde9ee;border-radius:18px;padding:8px;box-sizing:border-box}
+.atlas-hema-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.atlas-hema-grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.atlas-side-stack{display:grid;gap:14px}
+@media(max-width:1120px){.atlas-figure-panel,.atlas-figure-panel.secondary,.atlas-hema-grid.three{grid-template-columns:1fr}}
+@media(max-width:820px){.atlas-hema-grid{grid-template-columns:1fr}}
+
+/* Padronização visual das figuras do atlas */
+.atlas-image .atlas-svg-inline{width:100%;max-width:260px;height:auto;display:block}
+.atlas-image svg{overflow:visible}
+.atlas-svg{box-shadow:0 10px 28px rgba(27,66,82,.05)}
+.atlas-info-card,.atlas-meta-grid>div,.atlas-subcards article,.atlas-figure-copy{box-shadow:0 8px 22px rgba(27,66,82,.04)}
+.atlas-work,.atlas-intro{box-shadow:0 10px 28px rgba(27,66,82,.04)}

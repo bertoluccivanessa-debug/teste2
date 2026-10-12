@@ -1,0 +1,21 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+test('primeiro acesso solicita o nome, chama Doutor + nome e preserva navegação', async()=>{
+ const handlers={},store=new Map();const root={innerHTML:'',addEventListener:(event,fn)=>handlers[event]=fn,querySelector:()=>null};
+ Object.defineProperty(globalThis,'document',{value:{getElementById:id=>id==='app'?root:null,querySelector:()=>null},configurable:true});
+ Object.defineProperty(globalThis,'window',{value:{addEventListener:()=>{},scrollTo:()=>{}},configurable:true});
+ Object.defineProperty(globalThis,'localStorage',{value:{getItem:k=>store.get(k)||null,setItem:(k,v)=>store.set(k,v)},configurable:true});
+ Object.defineProperty(globalThis,'location',{value:{protocol:'http:',hostname:'test.example'},configurable:true});
+ Object.defineProperty(globalThis,'navigator',{value:{},configurable:true});
+ await import('../src/app.js?doctor-first-run');
+ assert.match(root.innerHTML,/Como devo chamar você/);
+ assert.match(root.innerHTML,/doctor-entry/);
+ const event={target:{id:'doctor-entry',elements:{doctorName:{value:'Lara'}}},preventDefault:()=>{}};
+ handlers.submit(event);
+ assert.doesNotMatch(root.innerHTML,/id="doctor-entry"/);
+ assert.match(root.innerHTML,/Doutor Lara/);
+ assert.equal(JSON.parse(store.get('immunoverse.doctor.v1')).name,'Lara');
+ const button={dataset:{page:'lab'},closest:()=>button};handlers.click({target:button});
+ assert.match(root.innerHTML,/ImunoLab 5.2/);
+ assert.match(root.innerHTML,/Doutor Lara/);
+});

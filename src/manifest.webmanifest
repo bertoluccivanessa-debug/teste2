@@ -1,0 +1,18 @@
+{
+  "name": "IMMUNOVERSE Clinical 5.5 — Imunologia Aplicada",
+  "short_name": "IMMUNOVERSE 5.5",
+  "description": "Trilha de Imunologia para Medicina: Conectar, Desenvolver e Praticar com simulações clínicas sintéticas",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f1f5f8",
+  "theme_color": "#092739",
+  "icons": [
+    {
+      "src": "./favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "immunoverse",
+  "private": true,
+  "scripts": {
+    "check": "godot --headless --path . --editor --quit",
+    "build": "godot --headless --path . --editor --quit",
+    "preview:build": "mkdir -p site && godot --headless --path . --editor --quit",
+    "preview:status": "test -f project.godot && echo 'IMMUNOVERSE pronto para preview'"
+  }
+}

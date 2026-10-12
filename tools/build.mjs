@@ -1,0 +1,15 @@
+import { mkdir, cp, rm, readFile } from 'node:fs/promises';
+import { resolve } from 'node:path';
+import { execFileSync } from 'node:child_process';
+import { CASES, WORLDS, GLOSSARY } from '../src/content.js';
+import { validateContent } from '../src/engine.js';
+const errors = validateContent(CASES,WORLDS,GLOSSARY);
+if (errors.length) throw new Error('Conteúdo inválido:\n'+errors.join('\n'));
+const root = resolve(import.meta.dirname, '..');
+await rm(resolve(root, 'dist'), {recursive:true, force:true});
+await mkdir(resolve(root, 'dist'), {recursive:true});
+await cp(resolve(root, 'src'), resolve(root, 'dist'), {recursive:true});
+const html = await readFile(resolve(root, 'dist/index.html'), 'utf8');
+if (!html.includes('src="./app.js"')) throw new Error('Entry point ausente');
+execFileSync(process.execPath, [resolve(root, 'tools/verify-static.mjs'), 'dist'], { stdio: 'inherit' });
+console.log(`Build válido: ${WORLDS.length} mundos, ${CASES.length} missões, ${GLOSSARY.length} conceitos. Saída: dist/`);
